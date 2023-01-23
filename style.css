@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Inter:wght@100;300;400;600;700&display=swap");
+:root {
+  --color: rgb(1, 133, 68);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  font-family: "Inter", sans-serif;
+}
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+}
+.contactBar,
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 5em;
+  padding-left: 4.2em;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.contactBar {
+  background-color: var(--color);
+  color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.contactBar button {
+  background-color: inherit;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.contactBar a {
+  margin: 0 10px;
+  color: aliceblue;
+}
+.navContainer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+}
+.navContainer .logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+.navContainer .logo-wrapper span,
+.navContainer .nav-links a {
+  font-size: 1.32em;
+  color: #333;
+  padding: 10px;
+}
+
+.navContainer .nav-links {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.navContainer .nav-links a:hover {
+  text-decoration: overline;
+  color: var(--color);
+  transition: 0.2s;
+}
+.navContainer .nav-links a:last-child {
+  border-radius: 10px;
+  background-color: var(--color);
+  color: white;
+  padding: 10px 20px;
+}
+.navContainer .nav-links a:last-child:hover {
+  text-decoration: none;
+  background: rgb(173, 148, 148);
+  color: rgb(27, 23, 23);
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.banner {
+  background: url("https://mindrisers.com.np/_next/static/media/splash-new.8b0defb2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 350px;
+  gap: 25px;
+  color: aliceblue;
+}
+.banner span {
+  font-size: 3.5em;
+  color: var(--color);
+}
+.banner h1 {
+  font-size: 3.5em;
+  word-spacing: 5px;
+  text-shadow: 4px 4px 2px rgba(210, 131, 131, 0.6);
+}
+.banner p {
+  width: 50%;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(232, 212, 212);
+  line-height: 1.4;
+}
+.banner button {
+  padding: 15px 25px;
+  border: 2px solid var(--color);
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  font-size: 1.4em;
+  color: var(--color);
+  cursor: pointer;
+}
+.banner button:hover {
+  background: var(--color);
+  color: rgb(232, 212, 212);
+  transition: 0.5s;
+}
+.course-wrapper {
+  width: 80%;
+  /* background: rgb(235, 156, 156); */
+  margin: 100px auto;
+}
+.course-wrapper span {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+.course-wrapper .courses-list {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.courses-list .course {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.courses-list .course:hover {
+  box-shadow: 5px 5px 5px -1px #cbb6b6c7;
+  border: 1px solid #cbb6b6c7;
+}
+.courses-list .course .course-hover {
+  position: relative;
+  width: 100%;
+  height: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: inherit;
+}
+
+.courses-list .course .course-hover img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  padding: 10px 0 0 15px;
+  transition: inherit;
+}
+.courses-list .course:hover .course-hover img {
+  transform: scale(1.1);
+}
+.courses-list .course .course-hover .hidden {
+  display: none;
+  font-size: 2em;
+  font-weight: 400;
+  color: aliceblue;
+  background: var(--color);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 15px 15px 10px 10px;
+  border-radius: 5px;
+  transition: inherit;
+}
+.courses-list .course:hover .course-hover .hidden a {
+  color: white;
+}
+.courses-list .course:hover .course-hover .hidden {
+  display: block;
+}
+.courses-list .course .course-hover .hidden:hover {
+  background: rgb(68, 180, 124);
+}
+.courses-list .course .course-info {
+  height: 100px;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+}
+.courses-list .course .course-info p {
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 5px;
+}
+.courses-list .course .course-info .course-limit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.courses-list .course .course-info .course-limit span {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.course-wrapper .viewAll {
+  display: flex;
+  justify-content: center;
+}
+.course-wrapper .viewAll button {
+  padding: 15px 25px;
+  border: 2px solid var(--color);
+  background: transparent;
+  border-radius: 10px;
+  font-size: 1.4em;
+  color: var(--color);
+  cursor: pointer;
+}
+.course-wrapper .viewAll button:hover {
+  background: var(--color);
+  color: rgb(232, 212, 212);
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px #333;
+  transition: 0.5s;
+}
