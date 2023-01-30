@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <title>Document</title>
   </head>
@@ -435,27 +436,79 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        slidesPerGroup: 1,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+    <!--Feature Section-->
+    <section class="features-container">
+      <div class="features-heading">
+        <h2>Benefits of Joining Mind Risers</h2>
+      </div>
+      <div class="features-items">
+        <div class="features-items-lists">
+          <div class="features-icon">
+            <i class="fa-solid fa-user-group fa-3x"></i>
+          </div>
+          <div class="features-item-heading"><p>Small Groups</p></div>
+          <div class="featutres-item-details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              autem! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              In, amet!
+            </p>
+          </div>
+        </div>
+        <div class="features-items-lists">
+          <div class="features-icon">
+            <i class="fa-solid fa-calendar-days fa-3x"></i>
+          </div>
+          <div class="features-item-heading">
+            <p>Flexible Class Schedule</p>
+          </div>
+          <div class="featutres-item-details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              autem! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              In, amet!
+            </p>
+          </div>
+        </div>
+        <div class="features-items-lists">
+          <div class="features-icon">
+            <i class="fa-solid fa-people-group fa-3x"></i>
+          </div>
+          <div class="features-item-heading">
+            <p>Experienced Instructors</p>
+          </div>
+          <div class="featutres-item-details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+              autem! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              In, amet!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Testimonial Section-->
+    <section class="testimonial-container">
+      <div class="testimonial-wrappers">
+        <div class="testimonial-wrapper">
+          <div class="testimonial-head">
+            <div class="testimonial"><p>Testimonials</p></div>
+            <div class="testimonial-heading">
+              <h2>What our partner company say about us?</h2>
+            </div>
+          </div>
+          <div class="testimonial-lists">
+            <div class="testimonial-rating">*****</div>
+            <div class="testimonial-quote">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              vitae adipisci, amet veritatis aut voluptate?
+            </div>
+            <div class="testimonial-name">My Own Company</div>
+            <div class="testimonial-position">CEO</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>

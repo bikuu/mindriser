@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Inter:wght@100;300;400;600;700&display=swap");
 :root {
   --color: rgb(1, 133, 68);
+  --text-color: #333;
 }
 * {
   padding: 0;
@@ -64,7 +65,7 @@ li {
 .navContainer .logo-wrapper span,
 .navContainer .nav-links a {
   font-size: 1.32em;
-  color: #333;
+  color: var(--text-color);
   padding: 10px;
 }
 
@@ -145,7 +146,7 @@ li {
 .course-wrapper span {
   font-size: 3.5em;
   font-weight: 700;
-  color: #333;
+  color: var(--text-color);
 }
 .course-wrapper .courses-list {
   margin-top: 10px;
@@ -253,7 +254,7 @@ li {
   background: var(--color);
   color: rgb(232, 212, 212);
   transform: scale(1.1);
-  box-shadow: 2px 2px 2px #333;
+  box-shadow: 2px 2px 2px var(--text-color);
   transition: 0.5s;
 }
 
@@ -275,12 +276,12 @@ li {
   font-size: 3.5em;
   font-weight: 600;
   margin-bottom: 30px;
-  color: #333;
+  color: var(--text-color);
 }
 .about-us .about-intro div p {
   font-size: 1.8em;
   text-align: justify;
-  color: #333;
+  color: var(--text-color);
 }
 .about-us .about-intro img {
   height: 250px;
@@ -322,7 +323,7 @@ li {
 .gallary p {
   font-size: 3.5em;
   font-weight: 700;
-  color: #333;
+  color: var(--text-color);
 }
 .gallary-item {
   display: flex;
@@ -361,6 +362,7 @@ li {
 
 .request-wrapper {
   padding: 5.5em 20em;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -370,17 +372,17 @@ li {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: 49%;
+  flex: 50%;
 }
 .request-wrapper .request-info h2 {
   font-size: 2.5em;
   font-weight: 700;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 .request-wrapper .request-info p {
   font-size: 1.5em;
-  color: #333;
+  color: var(--text-color);
 }
 /*Form Part*/
 .request-wrapper .request-form {
@@ -388,13 +390,13 @@ li {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 49%;
 }
 
 .request-wrapper .request-form .form-item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
 }
 .request-wrapper .request-form .form-item div {
   display: flex;
@@ -408,13 +410,11 @@ li {
 .request-wrapper .request-form .form-item label {
   color: rgb(28, 27, 27) !important;
 }
-.request-wrapper .request-form .form-item label,
-.request-wrapper .request-form .form-item input,
-.request-wrapper .request-form .form-item select {
+.request-wrapper .request-form .form-item label {
   font-weight: 600;
   margin-bottom: 10px;
   color: rgb(82, 76, 76);
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 .request-wrapper .request-form .form-item label::after {
   content: " *";
@@ -422,11 +422,14 @@ li {
 }
 .request-wrapper .request-form .form-item input,
 .request-wrapper .request-form .form-item select {
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
   width: 100%;
   border: 1px solid #8da6da;
+  color: rgb(82, 76, 76);
   outline: none;
+  margin-bottom: 10px;
+  box-shadow: 0 0 9px 1px hsl(0deg 0% 40% / 24%);
 }
 .request-wrapper .request-form .form-item option {
   color: rgb(82, 76, 76);
@@ -458,7 +461,7 @@ li {
   font-size: 3.5em;
   font-weight: 600;
   margin-bottom: 30px;
-  color: #333;
+  color: var(--text-color);
 }
 .story-container .story-list {
   display: flex;
@@ -505,5 +508,105 @@ li {
 }
 .story-container .story-list .story-item-name p {
   font-size: 1.6em;
-  color: #333;
+  color: var(--text-color);
+}
+
+/*Features of Mind Risers Section*/
+.features-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5.5em 20em;
+}
+.features-container .features-heading {
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 80px;
+}
+.features-container .features-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}
+.features-container .features-items .features-items-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color);
+}
+.features-container .features-items .features-items-lists .features-icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.features-container
+  .features-items
+  .features-items-lists
+  .features-item-heading {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.features-container
+  .features-items
+  .features-items-lists
+  .featutres-item-details {
+  font-size: 1.5em;
+  color: var(--text-color);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/*Testimonials*/
+
+.testimonial-container {
+  padding-top: 5.5em;
+}
+.testimonial-container .testimonial-wrappers {
+  background: url("https://mindrisers.com.np/_next/static/media/testimonial.1dc39c2b.jpg")
+    no-repeat fixed;
+  background-size: cover;
+  height: max-content;
+}
+.testimonial-container .testimonial-wrappers .testimonial-wrapper {
+  background: rgba(0, 0, 0, 0.75);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: aliceblue;
+}
+.testimonial-wrapper .testimonial-head {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.testimonial-wrapper .testimonial {
+  color: var(--color);
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin: 20px;
+}
+.testimonial-wrapper .testimonial-heading {
+  font-size: 2em;
+}
+
+.testimonial-wrapper .testimonial-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }
