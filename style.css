@@ -16,6 +16,9 @@ html {
 
   font-family: "Inter", sans-serif;
 }
+body {
+  position: relative;
+}
 a,
 li {
   list-style: none;
@@ -58,11 +61,13 @@ li {
   background: white;
   z-index: 100;
 }
-.navContainer .logo-wrapper {
+.navContainer .logo-wrapper,
+.footer-wrapper-1 .logo-wrapper {
   display: flex;
   align-items: center;
 }
 .navContainer .logo-wrapper span,
+.footer-wrapper-1 .logo-wrapper span,
 .navContainer .nav-links a {
   font-size: 1.32em;
   color: var(--text-color);
@@ -570,22 +575,24 @@ li {
 
 .testimonial-container {
   padding-top: 5.5em;
+  position: relative;
 }
 .testimonial-container .testimonial-wrappers {
   background: url("https://mindrisers.com.np/_next/static/media/testimonial.1dc39c2b.jpg")
     no-repeat fixed;
   background-size: cover;
-  height: max-content;
+  position: relative;
 }
 .testimonial-container .testimonial-wrappers .testimonial-wrapper {
   background: rgba(0, 0, 0, 0.75);
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: aliceblue;
+  position: relative;
 }
 .testimonial-wrapper .testimonial-head {
   text-align: center;
@@ -605,8 +612,211 @@ li {
 
 .testimonial-wrapper .testimonial-lists {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial-wrapper .testimonial-lists .testimonial-lists-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* position: relative;
+  width: 80%;
+  height: 100%; */
+}
+.testimonial-wrapper .testimonial-lists .swiper-slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  /* position: relative; */
+  /* flex-shrink: 0; */
+  background: aliceblue;
+  width: 33.33%;
+  border-radius: 5px;
+  padding: 35px 30px;
+  margin-right: 50px;
+}
+/* .testimonial-wrapper .testimonial-lists .swiper-slide:nth-child(2n) {
+  width: 40%;
+}
+.testimonial-wrapper .testimonial-lists .swiper-slide:nth-child(3n) {
+  width: 40%;
+} */
+.testimonial-wrapper .testimonial-lists .testimonial-rating i {
+  font-size: 2.5em;
+  color: rgb(244, 232, 8);
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+.testimonial-wrapper .testimonial-lists .testimonial-quote {
+  font-size: 2em;
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+  margin-bottom: 30px;
+}
+.testimonial-wrapper .testimonial-lists .testimonial-name {
+  color: rgb(53, 51, 51);
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.testimonial-wrapper .testimonial-lists .testimonial-position {
+  font-size: 1.9em;
+  color: var(--text-color);
+}
+
+/*Footer*/
+
+.footer-container .footer-wrappers {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5.5em 20em;
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+  gap: 50px;
+}
+.footer-container .footer-wrapper-1 {
+  width: 20%;
+}
+.footer-wrapper-1 .logo-wrapper span {
+  color: aliceblue;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.footer-wrapper-1 p {
+  text-align: justify;
+  font-size: 1.4em;
+  color: aliceblue;
+  margin-top: 10px;
+  line-height: 1.5;
+  word-spacing: 1px;
+}
+.footer-container .footer-wrapper-2,
+.footer-wrapper-3,
+.footer-wrapper-4 {
+  /* width: auto; */
+  margin-top: 10px;
+}
+.footer-container .footer-wrapper-5 {
+  width: 20%;
+
+  margin-top: 10px;
+}
+.footer-wrapper-2:has(h2, li),
+.footer-wrapper-3:has(h2, li),
+.footer-wrapper-4:has(h2, li),
+.footer-wrapper-5:has(h2, li) {
+  color: aliceblue;
+}
+.footer-wrapper-2 h2,
+.footer-wrapper-3 h2,
+.footer-wrapper-4 h2,
+.footer-wrapper-5 h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.footer-wrapper-2 li,
+.footer-wrapper-3 li,
+.footer-wrapper-4 li {
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.footer-wrapper-2 li:hover,
+.footer-wrapper-3 li:hover,
+.footer-wrapper-4 li:hover {
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity));
+}
+.footer-wrapper-4 a {
+  background: transparent;
+  color: aliceblue;
+  margin-right: 5px;
+}
+.footer-wrapper-5 input,
+.footer-wrapper-5 button {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid aliceblue;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+.footer-wrapper-5 input:focus {
+  border: 1px solid aliceblue;
+}
+.footer-wrapper-5 button {
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 50px;
+  background: var(--color);
+  border: 2px solid var(--color);
+  color: aliceblue;
+}
+.footer-wrapper-5 button i {
+  margin-right: 5px;
+  font-size: 1.5em;
+}
+.footer-container .copyrights {
+  height: 50px;
+  background: #000;
+  color: aliceblue;
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.fixed-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+}
+.fixed-container .ask-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(34, 197, 93);
+  padding: 8px 15px;
+  color: aliceblue;
+  margin-left: 25px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.fixed-container .ask-us h2 {
+  font-size: 1.4em;
+  margin-left: 5px;
+}
+
+.fixed-container .scroll {
+  display: none;
+  background: var(--color);
+  width: 40px;
+  height: 40px;
+  color: aliceblue;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 25px;
+  position: relative;
+}
+
+.fixed-container .scroll i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
